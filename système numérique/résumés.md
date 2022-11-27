@@ -27,7 +27,9 @@ $\overline{A*B} = \bar A + \bar B$
 6. $x + 1 = 1$
 7. $x + x = x$
 8. $x + \bar x = 1$
-## Syntaxe
+
+## VHDL (VHSIC Hardware Description Language) 
+### Syntaxe
 `--` commentaires
 
 `;` fin d'instruction
