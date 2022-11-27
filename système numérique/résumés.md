@@ -103,20 +103,19 @@ E <=
 ### Types
 `std_logic` signal de 1 bit
 
-`std_logic_vector(<max> downto <min>)` ou `(<min> to <max>)` signal de max à min bits (
+`std_logic_vector(<max> downto <min>)` ou `(<min> to <max>)` signal de max à min bits  (3 to 0) fera 4 bits
 
-`unsigned(<max> downto <min>)` ou `(<min> to <max>)` vecteur non signé de max à min bits
+`unsigned(<max> downto <min>)` ou `(<min> to <max>)` vecteur non signé de max à min bits (3 to 0) fera 4 bits
 
-`signed(<max> downto <min>)` ou `(<min> to <max>)` vecteur signé de max à min bits
+`signed(<max> downto <min>)` ou `(<min> to <max>)` vecteur signé de max à min bits (3 to 0) fera 4 bits
 
-integer ??
-> ❌
+integer ❌
 
 `boolean` valeur possible true et false
 
 `type JOUR_SEMAINE is (lu, ma, me, je, ve, sa, di)` type personnalisé
 
-`type T_RAM is array(... to ...) of std_logic_vector(... downto ...)` matrice
+`type T_RAM is array(<min> to <max>) of std_logic_vector(<min> to <max>)` matrice (3 to 0) fera 4 bits
 
 ### Libraries
 Dans tous les fichiers VHDL il faut inclure ces 2 lignes
@@ -153,7 +152,7 @@ begin
   o <= i1 when sel='0' else i2;
 end Behavioral;
 ```
-> Behavioral ? ❌
+Que fait Behavioral ? ❌
 ```VHDL
 architecture Behavioral of multiplexeur is
 begin
