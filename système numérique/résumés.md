@@ -1,5 +1,32 @@
 # CP1
 ## Algèbre de bool
+### Opération de base
+And $A*B$
+
+![image](https://user-images.githubusercontent.com/62622644/204113876-cc0c1e96-1f08-48c5-9adb-08c299f97742.png)
+
+Ou $A+B$
+
+![image](https://user-images.githubusercontent.com/62622644/204113974-7f3fc294-2d44-4aa0-ac94-79f83028a6f4.png)
+
+Not $\bar A$
+
+![image](https://user-images.githubusercontent.com/62622644/204114033-1f614ca0-4351-408e-9eb4-b9d1c6e44699.png)
+
+### De Morgan
+$\overline{A+B} = \bar A * \bar B$
+
+$\overline{A*B} = \bar A + \bar B$
+
+### Théorèmes
+1. $x * 0 = 0$
+2. $x * 1 = x$
+3. $x * x = x$
+4. $x * \bar x = 0$
+5. $x + 0 = x$
+6. $x + 1 = 1$
+7. $x + x = x$
+8. $x + \bar x = 1$
 ## Syntaxe
 `--` commentaires
 
@@ -10,6 +37,7 @@
 `signal <nom> : <type>` définition d'un signal
 
 `<=` assignation
+
 
 ### Assignations (`<=`)
 #### Assignations inconditionnelles hors process
