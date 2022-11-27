@@ -1,32 +1,62 @@
 # CP1
 ## Algèbre de bool
 ### Opération de base
-And $A*B$
+And ( $A\*B$ )
 
-![image](https://user-images.githubusercontent.com/62622644/204113876-cc0c1e96-1f08-48c5-9adb-08c299f97742.png)
+![image](https://user-images.githubusercontent.com/62622644/204163208-808678a4-3d73-4f95-8531-4a7a6c88fd7a.png)
 
-Ou $A+B$
+Or ( $A+B$ )
 
-![image](https://user-images.githubusercontent.com/62622644/204113974-7f3fc294-2d44-4aa0-ac94-79f83028a6f4.png)
+![image](https://user-images.githubusercontent.com/62622644/204163201-9cd0397c-f76d-4ae2-982e-f740bf55c5f2.png)
 
-Not $\bar A$
+Not ( $\bar A$ )
 
-![image](https://user-images.githubusercontent.com/62622644/204114033-1f614ca0-4351-408e-9eb4-b9d1c6e44699.png)
+![image](https://user-images.githubusercontent.com/62622644/204163192-73f37ba9-df7f-45bc-b88f-21280805b935.png)
+
+Xor ( $AB=A\bar B+\bar AB$ )
+
+![image](https://user-images.githubusercontent.com/62622644/204163039-c86443f8-8f20-42e8-886f-bde8f389dada.png)
+
 
 ### De Morgan
-$\overline{A+B} = \bar A * \bar B$
-
-$\overline{A*B} = \bar A + \bar B$
+1. $\overline{A+B} = \bar A\*\bar B$
+2. $\overline{A\*B} = \bar A+\bar B$
 
 ### Théorèmes
-1. $x * 0 = 0$
-2. $x * 1 = x$
-3. $x * x = x$
-4. $x * \bar x = 0$
-5. $x + 0 = x$
-6. $x + 1 = 1$
-7. $x + x = x$
-8. $x + \bar x = 1$
+
+1. $x\*0=0$
+2. $x\*1=x$
+3. $x\*x=x$
+4. $x\*\bar x = 0$
+5. $x+0=x$
+6. $x+1=1$
+7. $x+x=x$
+8. $x+\bar x=1$
+9. $x+y=y+x$ (commutativité du or)
+10. $x\*y=y\*x$ (commutativité du and)
+11. $x+(y+z)=(x+y)+z=x+y)+z$ (associativé du or)
+12. $x\*(y\*z)=(x\*y)\*z=x\*y\*z$ (associativé du and)
+13. $x\*(y+z)=x\*y+x\*z$ et $(w+x)\*(y+z)=w\*y+x\*y+w\*z+x\*z$ (distributivité du and)
+14. $x+x\*y=x$
+15. $x+\bar x\*y=x+y$
+
+### Table de vérité
+Indiquer la valeur de X pour chaque ABC puis évaluer les valeurs pour leqelles le résultat sera à 1 (les minterms) puis en faire le forme cannonique
+
+| A | B | C | X | eq |
+|---|---|---|---| --- |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 1 | $\bar AB\bar C$
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 | $A\bar B\bar C$
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 | $AB\bar C$
+| 1 | 1 | 1 | 0 |
+
+Somme de produits $X=\bar AB\bar C+A\bar B\bar C+AB\bar C$
+###  Diagramme de Karnaugh
+![image](https://user-images.githubusercontent.com/62622644/204162929-f639ab08-6a4f-4791-bb23-2a5f9273c4c1.png)
 
 ## VHDL (VHSIC Hardware Description Language) 
 ### Syntaxe
