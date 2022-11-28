@@ -109,7 +109,7 @@ E <=
 
 `signed(<max> downto <min>)` ou `(<min> to <max>)` vecteur signé de max à min bits (3 to 0) fera 4 bits
 
-integer ❌
+`integer` ou `integer range <max> to <min>` entier ❌
 
 `boolean` valeur possible true et false
 
