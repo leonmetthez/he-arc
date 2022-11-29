@@ -93,11 +93,17 @@ F <=
 
 #### Assignations conditionnelles hors process avec with select (utilisé pour les tables de vérités avec un bus d'entrée)
 ```VHDL
+signal AB : std_logic_vector(1 downto 0);
+
+AB <= A & B;
+```
+```VHDL
 with AB select
 E <= 
   '1' when "01",
   '1' when "10",
   '0' when others;
+
 ```
 
 ### Types
